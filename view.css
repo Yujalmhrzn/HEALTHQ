@@ -1,0 +1,183 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/*--- Navigation Styling --- */
+nav {
+    background-color: #f0f8ff;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex: 1; /* Allows spacing control */
+}
+
+nav ul li {
+    margin: 0 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul li a:hover {
+    color: #007acc;
+    transform: scale(1.1);
+}
+
+/*--- Logout Button Alignment (Right) --- */
+.login-container {
+    margin-left: auto; /* Pushes logout to the right */
+}
+
+.login-container a {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    padding: 8px 16px;
+    background-color: #007acc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-container a:hover {
+    background-color: #005f99;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Back Button Styling (Positioned in Top Right) */
+.back-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #005f99;
+    transform: scale(1.05);
+}
+
+/*--- Footer Styling --- */
+footer {
+    background-color: #51c8e6;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+/*--- Main Content and Info Blocks Styling --- */
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    margin-top: 60px; /* Adjust to make space for the back button */
+}
+
+.info {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows blocks to wrap on smaller screens */
+}
+
+/*--- Table Styling --- */
+.appointments-table h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table-container th, .table-container td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-container th {
+    background-color: #007acc;
+    color: white;
+    font-size: 16px;
+}
+
+.table-container td {
+    font-size: 14px;
+}
+
+.table-container tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table-container p {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+}
+
+/*--- Delete Button Styling --- */
+.table-container td a {
+    color: red;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.table-container td a:hover {
+    background-color: red;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .appointments-table h2 {
+        font-size: 24px;
+    }
+
+    .table-container table {
+        font-size: 14px;
+    }
+
+    .table-container th, .table-container td {
+        padding: 10px;
+    }
+}
